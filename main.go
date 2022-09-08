@@ -8,6 +8,9 @@ func main() {
 
 	palindrom := ""
 	palindrom = "A man, a plan, a canal: Panama"
+	palindrom = " ab"
+	palindrom = "0P"
+
 	fmt.Println(isPalindrome(palindrom))
 
 }
@@ -24,6 +27,13 @@ func isPalindrome(s string) bool {
 			res = append(res, string(v+32))
 		}
 	}
+	l := len(res)
+	for i, re := range res {
+		if re != res[l-i-1] {
+			return false
+		}
 
-	return false
+	}
+
+	return true
 }
