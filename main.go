@@ -13,8 +13,6 @@ func main() {
 }
 
 func isPalindrome(s string) bool {
-	// remove spases
-	//res := strings.Join(strings.Fields(s), "")
 
 	// remove all no letter & lower case
 	res := make([]string, 0, len(s))
